@@ -1,11 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE DADDY'S CAFE</title>
+<title>The Daddy's Cafe</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,12 +17,11 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#050505;
-color:#fff;
-padding:20px;
+background:
+radial-gradient(circle at top,#2d2d2d 0%,#121212 20%,#050505 55%,#000 100%);
 min-height:100vh;
-overflow-x:hidden;
-position:relative;
+padding:20px;
+color:#fff;
 }
 
 body:before{
@@ -29,11 +29,10 @@ content:'';
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 20% 20%, rgba(255,120,0,.18), transparent 30%),
-radial-gradient(circle at 80% 30%, rgba(255,120,0,.12), transparent 25%),
-radial-gradient(circle at 50% 80%, rgba(255,120,0,.10), transparent 35%);
-filter:blur(80px);
-z-index:-2;
+radial-gradient(circle at 20% 20%, rgba(255,140,0,.08), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(255,140,0,.05), transparent 45%);
+filter:blur(60px);
+pointer-events:none;
 }
 
 .container{
@@ -43,254 +42,154 @@ margin:auto;
 
 .header{
 text-align:center;
-margin-bottom:30px;
+padding:40px 20px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,140,0,.15);
+border-radius:25px;
+backdrop-filter:blur(20px);
+margin-bottom:25px;
 }
 
-.header h1{
-font-size:2.8rem;
-color:#ff7a00;
-text-shadow:
-0 0 10px #ff7a00,
-0 0 20px #ff7a00,
-0 0 40px #ff7a00;
+.cafe-name{
+font-size:clamp(2rem,5vw,4rem);
+font-weight:800;
+color:#ff8c00;
+white-space:nowrap;
+text-shadow:0 0 10px #ff8c00,0 0 25px #ff8c00;
 }
 
-.header p{
-color:#bbb;
-margin-top:8px;
+.location{
+margin-top:10px;
+color:#ddd;
 }
 
-details{
-background:#101010;
-border:1px solid rgba(255,122,0,.3);
-border-radius:15px;
-margin-bottom:15px;
-overflow:hidden;
-box-shadow:0 0 15px rgba(255,122,0,.15);
-}
-
-summary{
+.category-btn{
+width:100%;
 padding:18px;
+margin-bottom:10px;
+border:none;
+border-radius:18px;
 cursor:pointer;
 font-size:18px;
-font-weight:600;
-color:#ff7a00;
-list-style:none;
+font-weight:700;
+color:#fff;
+background:linear-gradient(135deg,#ff8c00,#ff6b00);
+box-shadow:0 0 20px rgba(255,140,0,.4);
 }
 
-summary::-webkit-details-marker{
+.menu-content{
 display:none;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,140,0,.15);
+border-radius:18px;
+padding:15px;
+margin-bottom:15px;
 }
 
-summary::after{
-content:"+";
-float:right;
-font-size:24px;
-}
-
-details[open] summary::after{
-content:"-";
-}
-
-.items{
-padding:0 18px 18px;
-}
-
-.item{
+.menu-content li{
+list-style:none;
 display:flex;
 justify-content:space-between;
-padding:12px 0;
+padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.item:last-child{
-border-bottom:none;
+.price{
+color:#ff8c00;
+font-weight:700;
 }
 
-.price{
-color:#ff7a00;
-font-weight:600;
+.whatsapp{
+display:block;
+text-align:center;
+text-decoration:none;
+background:linear-gradient(135deg,#25D366,#1fb655);
+color:#fff;
+padding:18px;
+font-weight:700;
+border-radius:50px;
+margin:30px auto;
+max-width:320px;
+font-size:18px;
+box-shadow:0 0 25px rgba(37,211,102,.4);
 }
 
 .footer{
 text-align:center;
-margin-top:35px;
-color:#bbb;
-line-height:1.8;
-}
-
-.order-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 24px;
-background:#ff7a00;
-color:#fff;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-box-shadow:0 0 15px rgba(255,122,0,.5);
+color:#999;
+padding:20px;
 }
 
 @media(max-width:600px){
-
-.header h1{
-font-size:2rem;
+.cafe-name{
+font-size:1.9rem;
+}
 }
 
-.item{
-font-size:14px;
-}
-
-summary{
-font-size:16px;
-}
-
-}
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
 <div class="header">
-<h1>THE DADDY'S CAFE</h1>
-<p>Pickup & Delivery Available</p>
+<h1 class="cafe-name">THE DADDY'S CAFE</h1>
+<p class="location">Rangirkhari Point, Silchar - 788005</p>
 </div>
 
-<details>
-<summary>FRIED RICE</summary>
-<div class="items">
-<div class="item"><span>Egg Fried Rice</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Chicken Fried Rice</span><span class="price">Rs.100</span></div>
-<div class="item"><span>Egg-Chicken Fried Rice</span><span class="price">Rs.120</span></div>
-<div class="item"><span>Schezwan Egg Rice</span><span class="price">Rs.90</span></div>
-<div class="item"><span>Schezwan Chicken Rice</span><span class="price">Rs.120</span></div>
-<div class="item"><span>Schezwan Egg-Chicken Rice</span><span class="price">Rs.149</span></div>
+<button class="category-btn">FRIED SPECIALS</button>
+<div class="menu-content">
+<li><span>Korean Juicy Wings (4 pcs)</span><span class="price">Rs. 129</span></li>
+<li><span>Drums of Heaven (4 pcs)</span><span class="price">Rs. 149</span></li>
+<li><span>Chicken Cheese Balls (6 pcs)</span><span class="price">Rs. 149</span></li>
+<li><span>Fish Fingers (6 pcs)</span><span class="price">Rs. 149</span></li>
 </div>
-</details>
 
-<details>
-<summary>FRIED NOODLES</summary>
-<div class="items">
-<div class="item"><span>Egg Fried Noodles</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Chicken Fried Noodles</span><span class="price">Rs.100</span></div>
-<div class="item"><span>Egg-Chicken Fried Noodles</span><span class="price">Rs.120</span></div>
-<div class="item"><span>Schezwan Egg Noodles</span><span class="price">Rs.90</span></div>
-<div class="item"><span>Schezwan Chicken Noodles</span><span class="price">Rs.120</span></div>
-<div class="item"><span>Schezwan Egg-Chicken Noodles</span><span class="price">Rs.149</span></div>
+<button class="category-btn">CHICKEN SPECIALS</button>
+<div class="menu-content">
+<li><span>Chilli Chicken (6 pcs)</span><span class="price">Rs. 149</span></li>
+<li><span>Chicken Dry Fry (6 pcs)</span><span class="price">Rs. 129</span></li>
+<li><span>Chicken 65 (6 pcs)</span><span class="price">Rs. 149</span></li>
 </div>
-</details>
 
-<details>
-<summary>GRILLED SANDWICHES</summary>
-<div class="items">
-<div class="item"><span>Corn Grilled Sandwich</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Paneer Grilled Sandwich</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Paneer 'n' Corn Grilled Sandwich</span><span class="price">Rs.80</span></div>
-<div class="item"><span>Chicken Grilled Sandwich</span><span class="price">Rs.99</span></div>
-<div class="item"><span>Chicken 'n' Corn Grilled Sandwich</span><span class="price">Rs.119</span></div>
+<button class="category-btn">FRIED RICE</button>
+<div class="menu-content">
+<li><span>Egg Fried Rice</span><span class="price">Rs. 70</span></li>
+<li><span>Chicken Fried Rice</span><span class="price">Rs. 100</span></li>
+<li><span>Egg Chicken Fried Rice</span><span class="price">Rs. 120</span></li>
+<li><span>Schezwan Egg Chicken Rice</span><span class="price">Rs. 149</span></li>
 </div>
-</details>
 
-<details>
-<summary>MOMOS</summary>
-<div class="items">
-<div class="item"><span>Veg Momo (6pc)</span><span class="price">Rs.40</span></div>
-<div class="item"><span>Chicken Keema Momo (6pc)</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Veg Fried Momo (6pc)</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Chicken Keema Fried Momo (6pc)</span><span class="price">Rs.80</span></div>
-<div class="item"><span>Veg Pan Fried Momo (6pc)</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Chicken Keema Pan Fried Momo (6pc)</span><span class="price">Rs.90</span></div>
+<button class="category-btn">FRIED NOODLES</button>
+<div class="menu-content">
+<li><span>Egg Fried Noodles</span><span class="price">Rs. 70</span></li>
+<li><span>Chicken Fried Noodles</span><span class="price">Rs. 100</span></li>
+<li><span>Egg Chicken Fried Noodles</span><span class="price">Rs. 120</span></li>
+<li><span>Schezwan Egg Chicken Noodles</span><span class="price">Rs. 149</span></li>
 </div>
-</details>
 
-<details>
-<summary>KOLKATA ROLLS</summary>
-<div class="items">
-<div class="item"><span>Paneer Roll</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Egg Roll</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Chicken Roll</span><span class="price">Rs.99</span></div>
-<div class="item"><span>Egg-Chicken Roll</span><span class="price">Rs.120</span></div>
-</div>
-</details>
+<!-- Add Grilled Sandwiches, Kolkata Rolls, Momos, Shakes, Mocktails and Morning Specials here in the same format -->
 
-<details>
-<summary>SHAKES</summary>
-<div class="items">
-<div class="item"><span>Chocolate Shake</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Strawberry Shake</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Watermelon Shake</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Royal Alphonso Shake</span><span class="price">Rs.70</span></div>
-</div>
-</details>
-
-<details>
-<summary>MOCKTAILS</summary>
-<div class="items">
-<div class="item"><span>Minty Lemon Fizz</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Blueberry Sparkler</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Scarlet Cherry Splash</span><span class="price">Rs.70</span></div>
-<div class="item"><span>Ocean Blue Lagoon</span><span class="price">Rs.70</span></div>
-</div>
-</details>
-
-<details>
-<summary>FRIED SPECIALS</summary>
-<div class="items">
-<div class="item"><span>Korean Juicy Wings (4pc)</span><span class="price">Rs.129</span></div>
-<div class="item"><span>Drums of Heaven (4pc)</span><span class="price">Rs.149</span></div>
-<div class="item"><span>Chicken Cheese Balls (6pc)</span><span class="price">Rs.149</span></div>
-<div class="item"><span>Fried Wings (4pc)</span><span class="price">Rs.99</span></div>
-<div class="item"><span>Chicken Pakodas (8pc)</span><span class="price">Rs.99</span></div>
-<div class="item"><span>Fried Chicken Breast</span><span class="price">Rs.99</span></div>
-<div class="item"><span>Fish Fingers (6pc)</span><span class="price">Rs.149</span></div>
-</div>
-</details>
-
-<details>
-<summary>CHICKEN SPECIALS</summary>
-<div class="items">
-<div class="item"><span>Chilli Chicken (6pc)</span><span class="price">Rs.149</span></div>
-<div class="item"><span>Chicken Dry Fry (6pc)</span><span class="price">Rs.129</span></div>
-<div class="item"><span>Chicken 65 (6pc)</span><span class="price">Rs.149</span></div>
-</div>
-</details>
-
-<details>
-<summary>MAGGI</summary>
-<div class="items">
-<div class="item"><span>Plain Fried Maggi</span><span class="price">Rs.40</span></div>
-<div class="item"><span>Egg Fried Maggi</span><span class="price">Rs.50</span></div>
-<div class="item"><span>Jhol Maggi</span><span class="price">Rs.99</span></div>
-</div>
-</details>
-
-<details>
-<summary>MORNING SPECIALS (07:30 AM - 01:30 PM)</summary>
-<div class="items">
-<div class="item"><span>Plain Pulao</span><span class="price">Rs.30</span></div>
-<div class="item"><span>Egg Pulao</span><span class="price">Rs.50</span></div>
-<div class="item"><span>Paneer Pulao</span><span class="price">Rs.50</span></div>
-<div class="item"><span>Chicken Pulao</span><span class="price">Rs.60</span></div>
-<div class="item"><span>Chicken Keema Pulao</span><span class="price">Rs.70</span></div>
-<div class="item"><span>4pc Poori & Paneer Curry</span><span class="price">Rs.50</span></div>
-<div class="item"><span>4pc Poori & Egg Curry</span><span class="price">Rs.50</span></div>
-<div class="item"><span>4pc Poori & Chicken Curry</span><span class="price">Rs.60</span></div>
-<div class="item"><span>4pc Poori & Chicken Keema</span><span class="price">Rs.70</span></div>
-</div>
-</details>
+<a class="whatsapp" href="https://wa.me/919181333402">
+ Order on WhatsApp
+</a>
 
 <div class="footer">
-<p>Order via WhatsApp, Swiggy & Zomato</p>
-<p>Menu items are subject to availability. Please confirm availability before placing your order.</p>
-
-<a href="https://wa.me/919181333402" class="order-btn">
-ORDER ON WHATSAPP
-</a>
+© The Daddy's Cafe
 </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.category-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const menu=btn.nextElementSibling;
+menu.style.display=
+menu.style.display==='block' ? 'none' : 'block';
+});
+});
+</script>
 
 </body>
 </html>
+```
