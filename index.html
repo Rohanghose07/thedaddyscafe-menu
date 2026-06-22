@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -16,7 +17,7 @@
 }
 
 body{
-    background:#0a0a0a;
+    background:#080808;
     color:#ffffff;
     padding:20px;
 }
@@ -28,57 +29,60 @@ body{
 
 .header{
     text-align:center;
-    margin-bottom:30px;
-    padding:10px;
+    margin-bottom:35px;
 }
 
 .logo{
-    font-size:2.2rem;
+    color:#FFA500;
+    font-size:2.8rem;
     font-weight:700;
-    color:#ff8c00;
-    white-space:nowrap;
+    letter-spacing:1px;
 }
 
 .location{
+    color:#bdbdbd;
     margin-top:8px;
-    color:#cfcfcf;
-    font-size:0.95rem;
-}
-
-.menu-divider{
-    width:120px;
-    height:2px;
-    background:#ff8c00;
-    margin:15px auto;
+    font-size:15px;
 }
 
 .menu-title{
-    color:#ff8c00;
-    font-size:1.8rem;
+    color:#FFA500;
+    margin-top:20px;
+    font-size:2rem;
     font-weight:600;
-    letter-spacing:3px;
+    letter-spacing:4px;
+}
+
+.line{
+    width:140px;
+    height:3px;
+    background:#FFA500;
+    margin:15px auto;
+    border-radius:50px;
 }
 
 details{
-    background:#121212;
-    margin-bottom:12px;
-    border:1px solid rgba(255,140,0,0.25);
-    border-radius:12px;
+    background:#111111;
+    border:1px solid #222;
+    border-radius:14px;
+    margin-bottom:15px;
     overflow:hidden;
+    transition:.3s;
 }
 
 details:hover{
-    border-color:#ff8c00;
+    border-color:#FFA500;
 }
 
 summary{
-    cursor:pointer;
-    padding:18px 20px;
-    font-size:1.05rem;
-    font-weight:600;
-    color:#ff8c00;
-    background:#161616;
     list-style:none;
+    cursor:pointer;
+    padding:18px 22px;
+    font-size:18px;
+    font-weight:600;
+    color:#FFA500;
+    background:#121212;
+    user-select:none;
 }
 
 summary::-webkit-details-marker{
@@ -86,15 +90,15 @@ summary::-webkit-details-marker{
 }
 
 .menu-items{
-    padding:8px 20px 15px;
+    padding:0 20px 15px;
 }
 
 .item{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 0;
-    border-bottom:1px dashed rgba(255,255,255,0.08);
+    padding:14px 0;
+    border-bottom:1px dashed rgba(255,255,255,.08);
 }
 
 .item:last-child{
@@ -102,28 +106,37 @@ summary::-webkit-details-marker{
 }
 
 .price{
-    color:#ff8c00;
-    font-weight:600;
+    color:#FFA500;
+    font-weight:700;
 }
 
 .footer{
     margin-top:30px;
     text-align:center;
-    color:#bdbdbd;
-    border-top:1px solid rgba(255,140,0,0.2);
+    color:#999;
+    border-top:1px solid #222;
     padding-top:20px;
-    font-size:0.9rem;
 }
 
-@media(max-width:600px){
-    .logo{
-        font-size:1.8rem;
-    }
+@media(max-width:768px){
 
-    .item{
-        font-size:14px;
-    }
+.logo{
+    font-size:2rem;
 }
+
+.menu-title{
+    font-size:1.6rem;
+}
+
+summary{
+    font-size:16px;
+}
+
+.item{
+    font-size:14px;
+}
+}
+
 </style>
 </head>
 
@@ -131,144 +144,145 @@ summary::-webkit-details-marker{
 
 <div class="container">
 
-    <div class="header">
-        <h1 class="logo">The Daddy's Cafe</h1>
+<div class="header">
+    <h1 class="logo">The Daddy's Cafe</h1>
 
-        <p class="location">
-            ?? Rangirkhari Point, Silchar - 788005
-        </p>
+    <p class="location">
+        Rangirkhari Point, Silchar - 788005
+    </p>
 
-        <div class="menu-divider"></div>
+    <div class="line"></div>
 
-        <h2 class="menu-title">MENU</h2>
-    </div>
+    <h2 class="menu-title">MENU</h2>
+</div>
 
-    <details>
-        <summary>?? Fried Rice</summary>
-        <div class="menu-items">
-            <div class="item"><span>Egg Fried Rice</span><span class="price">?70</span></div>
-            <div class="item"><span>Chicken Fried Rice</span><span class="price">?100</span></div>
-            <div class="item"><span>Egg-Chicken Fried Rice</span><span class="price">?120</span></div>
-            <div class="item"><span>Schezwan Egg Rice</span><span class="price">?90</span></div>
-            <div class="item"><span>Schezwan Chicken Rice</span><span class="price">?120</span></div>
-            <div class="item"><span>Schezwan Egg-Chicken Rice</span><span class="price">?149</span></div>
-        </div>
-    </details>
+<details>
+<summary>Fried Rice</summary>
+<div class="menu-items">
+<div class="item"><span>Egg Fried Rice</span><span class="price">?70</span></div>
+<div class="item"><span>Chicken Fried Rice</span><span class="price">?100</span></div>
+<div class="item"><span>Egg-Chicken Fried Rice</span><span class="price">?120</span></div>
+<div class="item"><span>Schezwan Egg Rice</span><span class="price">?90</span></div>
+<div class="item"><span>Schezwan Chicken Rice</span><span class="price">?120</span></div>
+<div class="item"><span>Schezwan Egg-Chicken Rice</span><span class="price">?149</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Fried Noodles</summary>
-        <div class="menu-items">
-            <div class="item"><span>Egg Fried Noodles</span><span class="price">?70</span></div>
-            <div class="item"><span>Chicken Fried Noodles</span><span class="price">?100</span></div>
-            <div class="item"><span>Egg-Chicken Fried Noodles</span><span class="price">?120</span></div>
-            <div class="item"><span>Schezwan Egg Noodles</span><span class="price">?90</span></div>
-            <div class="item"><span>Schezwan Chicken Noodles</span><span class="price">?120</span></div>
-            <div class="item"><span>Schezwan Egg-Chicken Noodles</span><span class="price">?149</span></div>
-        </div>
-    </details>
+<details>
+<summary>Fried Noodles</summary>
+<div class="menu-items">
+<div class="item"><span>Egg Fried Noodles</span><span class="price">?70</span></div>
+<div class="item"><span>Chicken Fried Noodles</span><span class="price">?100</span></div>
+<div class="item"><span>Egg-Chicken Fried Noodles</span><span class="price">?120</span></div>
+<div class="item"><span>Schezwan Egg Noodles</span><span class="price">?90</span></div>
+<div class="item"><span>Schezwan Chicken Noodles</span><span class="price">?120</span></div>
+<div class="item"><span>Schezwan Egg-Chicken Noodles</span><span class="price">?149</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Grilled Sandwiches</summary>
-        <div class="menu-items">
-            <div class="item"><span>Corn Grilled Sandwich</span><span class="price">?60</span></div>
-            <div class="item"><span>Paneer Grilled Sandwich</span><span class="price">?70</span></div>
-            <div class="item"><span>Paneer 'n' Corn Grilled Sandwich</span><span class="price">?80</span></div>
-            <div class="item"><span>Chicken Grilled Sandwich</span><span class="price">?99</span></div>
-            <div class="item"><span>Chicken 'n' Corn Grilled Sandwich</span><span class="price">?119</span></div>
-        </div>
-    </details>
+<details>
+<summary>Grilled Sandwiches</summary>
+<div class="menu-items">
+<div class="item"><span>Corn Grilled Sandwich</span><span class="price">?60</span></div>
+<div class="item"><span>Paneer Grilled Sandwich</span><span class="price">?70</span></div>
+<div class="item"><span>Paneer 'n' Corn Grilled Sandwich</span><span class="price">?80</span></div>
+<div class="item"><span>Chicken Grilled Sandwich</span><span class="price">?99</span></div>
+<div class="item"><span>Chicken 'n' Corn Grilled Sandwich</span><span class="price">?119</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Momos</summary>
-        <div class="menu-items">
-            <div class="item"><span>Veg Momo (6pc)</span><span class="price">?40</span></div>
-            <div class="item"><span>Chicken Keema Momo (6pc)</span><span class="price">?60</span></div>
-            <div class="item"><span>Veg Fried Momo (6pc)</span><span class="price">?60</span></div>
-            <div class="item"><span>Chicken Keema Fried Momo (6pc)</span><span class="price">?80</span></div>
-            <div class="item"><span>Veg Pan Fried Momo (6pc)</span><span class="price">?60</span></div>
-            <div class="item"><span>Chicken Keema Pan Fried Momo (6pc)</span><span class="price">?90</span></div>
-        </div>
-    </details>
+<details>
+<summary>Momos</summary>
+<div class="menu-items">
+<div class="item"><span>Veg Momo (6pc)</span><span class="price">?40</span></div>
+<div class="item"><span>Chicken Keema Momo (6pc)</span><span class="price">?60</span></div>
+<div class="item"><span>Veg Fried Momo (6pc)</span><span class="price">?60</span></div>
+<div class="item"><span>Chicken Keema Fried Momo (6pc)</span><span class="price">?80</span></div>
+<div class="item"><span>Veg Pan Fried Momo (6pc)</span><span class="price">?60</span></div>
+<div class="item"><span>Chicken Keema Pan Fried Momo (6pc)</span><span class="price">?90</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Kolkata Rolls</summary>
-        <div class="menu-items">
-            <div class="item"><span>Paneer Roll</span><span class="price">?70</span></div>
-            <div class="item"><span>Egg Roll</span><span class="price">?60</span></div>
-            <div class="item"><span>Chicken Roll</span><span class="price">?99</span></div>
-            <div class="item"><span>Egg-Chicken Roll</span><span class="price">?120</span></div>
-        </div>
-    </details>
+<details>
+<summary>Kolkata Rolls</summary>
+<div class="menu-items">
+<div class="item"><span>Paneer Roll</span><span class="price">?70</span></div>
+<div class="item"><span>Egg Roll</span><span class="price">?60</span></div>
+<div class="item"><span>Chicken Roll</span><span class="price">?99</span></div>
+<div class="item"><span>Egg-Chicken Roll</span><span class="price">?120</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Shakes</summary>
-        <div class="menu-items">
-            <div class="item"><span>Chocolate Shake</span><span class="price">?70</span></div>
-            <div class="item"><span>Strawberry Shake</span><span class="price">?70</span></div>
-            <div class="item"><span>Watermelon Shake</span><span class="price">?70</span></div>
-            <div class="item"><span>Royal Alphonso Shake</span><span class="price">?70</span></div>
-        </div>
-    </details>
+<details>
+<summary>Shakes</summary>
+<div class="menu-items">
+<div class="item"><span>Chocolate Shake</span><span class="price">?70</span></div>
+<div class="item"><span>Strawberry Shake</span><span class="price">?70</span></div>
+<div class="item"><span>Watermelon Shake</span><span class="price">?70</span></div>
+<div class="item"><span>Royal Alphonso Shake</span><span class="price">?70</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Mocktails</summary>
-        <div class="menu-items">
-            <div class="item"><span>Minty Lemon Fizz</span><span class="price">?70</span></div>
-            <div class="item"><span>Blueberry Sparkler</span><span class="price">?70</span></div>
-            <div class="item"><span>Scarlet Cherry Splash</span><span class="price">?70</span></div>
-            <div class="item"><span>Ocean Blue Lagoon</span><span class="price">?70</span></div>
-        </div>
-    </details>
+<details>
+<summary>Mocktails</summary>
+<div class="menu-items">
+<div class="item"><span>Minty Lemon Fizz</span><span class="price">?70</span></div>
+<div class="item"><span>Blueberry Sparkler</span><span class="price">?70</span></div>
+<div class="item"><span>Scarlet Cherry Splash</span><span class="price">?70</span></div>
+<div class="item"><span>Ocean Blue Lagoon</span><span class="price">?70</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Fried Specials</summary>
-        <div class="menu-items">
-            <div class="item"><span>Korean Juicy Wings (4pc)</span><span class="price">?129</span></div>
-            <div class="item"><span>Drums of Heaven (4pc)</span><span class="price">?149</span></div>
-            <div class="item"><span>Chicken Cheese Balls (6pc)</span><span class="price">?149</span></div>
-            <div class="item"><span>Fried Wings (4pc)</span><span class="price">?99</span></div>
-            <div class="item"><span>Chicken Pakodas (8pc)</span><span class="price">?99</span></div>
-            <div class="item"><span>Fried Chicken Breast</span><span class="price">?99</span></div>
-            <div class="item"><span>Fish Fingers (6pc)</span><span class="price">?149</span></div>
-        </div>
-    </details>
+<details>
+<summary>Fried Specials</summary>
+<div class="menu-items">
+<div class="item"><span>Korean Juicy Wings (4pc)</span><span class="price">?129</span></div>
+<div class="item"><span>Drums of Heaven (4pc)</span><span class="price">?149</span></div>
+<div class="item"><span>Chicken Cheese Balls (6pc)</span><span class="price">?149</span></div>
+<div class="item"><span>Fried Wings (4pc)</span><span class="price">?99</span></div>
+<div class="item"><span>Chicken Pakodas (8pc)</span><span class="price">?99</span></div>
+<div class="item"><span>Fried Chicken Breast</span><span class="price">?99</span></div>
+<div class="item"><span>Fish Fingers (6pc)</span><span class="price">?149</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Chicken Specials</summary>
-        <div class="menu-items">
-            <div class="item"><span>Chilli Chicken (6pc)</span><span class="price">?149</span></div>
-            <div class="item"><span>Chicken Dry Fry (6pc)</span><span class="price">?129</span></div>
-            <div class="item"><span>Chicken 65 (6pc)</span><span class="price">?149</span></div>
-        </div>
-    </details>
+<details>
+<summary>Chicken Specials</summary>
+<div class="menu-items">
+<div class="item"><span>Chilli Chicken (6pc)</span><span class="price">?149</span></div>
+<div class="item"><span>Chicken Dry Fry (6pc)</span><span class="price">?129</span></div>
+<div class="item"><span>Chicken 65 (6pc)</span><span class="price">?149</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Maggi</summary>
-        <div class="menu-items">
-            <div class="item"><span>Plain Fried Maggi</span><span class="price">?40</span></div>
-            <div class="item"><span>Egg Fried Maggi</span><span class="price">?50</span></div>
-            <div class="item"><span>Jhol Maggi</span><span class="price">?99</span></div>
-        </div>
-    </details>
+<details>
+<summary>Maggi</summary>
+<div class="menu-items">
+<div class="item"><span>Plain Fried Maggi</span><span class="price">?40</span></div>
+<div class="item"><span>Egg Fried Maggi</span><span class="price">?50</span></div>
+<div class="item"><span>Jhol Maggi</span><span class="price">?99</span></div>
+</div>
+</details>
 
-    <details>
-        <summary>?? Morning Specials (07:30 AM - 01:30 PM)</summary>
-        <div class="menu-items">
-            <div class="item"><span>Plain Pulao</span><span class="price">?30</span></div>
-            <div class="item"><span>Egg Pulao</span><span class="price">?50</span></div>
-            <div class="item"><span>Paneer Pulao</span><span class="price">?50</span></div>
-            <div class="item"><span>Chicken Pulao</span><span class="price">?60</span></div>
-            <div class="item"><span>Chicken Keema Pulao</span><span class="price">?70</span></div>
-            <div class="item"><span>4pc Poori & Paneer Curry</span><span class="price">?50</span></div>
-            <div class="item"><span>4pc Poori & Egg Curry</span><span class="price">?50</span></div>
-            <div class="item"><span>4pc Poori & Chicken Curry</span><span class="price">?60</span></div>
-            <div class="item"><span>4pc Poori & Chicken Keema</span><span class="price">?70</span></div>
-        </div>
-    </details>
+<details>
+<summary>Morning Specials (07:30 AM - 01:30 PM)</summary>
+<div class="menu-items">
+<div class="item"><span>Plain Pulao</span><span class="price">?30</span></div>
+<div class="item"><span>Egg Pulao</span><span class="price">?50</span></div>
+<div class="item"><span>Paneer Pulao</span><span class="price">?50</span></div>
+<div class="item"><span>Chicken Pulao</span><span class="price">?60</span></div>
+<div class="item"><span>Chicken Keema Pulao</span><span class="price">?70</span></div>
+<div class="item"><span>4pc Poori & Paneer Curry</span><span class="price">?50</span></div>
+<div class="item"><span>4pc Poori & Egg Curry</span><span class="price">?50</span></div>
+<div class="item"><span>4pc Poori & Chicken Curry</span><span class="price">?60</span></div>
+<div class="item"><span>4pc Poori & Chicken Keema</span><span class="price">?70</span></div>
+</div>
+</details>
 
-    <div class="footer">
-        Pickup & Delivery Available • Order via WhatsApp, Swiggy & Zomato
-    </div>
+<div class="footer">
+Pickup & Delivery Available<br>
+Order via WhatsApp, Swiggy & Zomato
+</div>
 
 </div>
 
